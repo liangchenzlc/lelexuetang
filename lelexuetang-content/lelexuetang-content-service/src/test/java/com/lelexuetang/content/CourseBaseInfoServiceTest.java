@@ -2,6 +2,7 @@ package com.lelexuetang.content;
 
 import com.lelexuetang.base.model.PageParams;
 import com.lelexuetang.base.model.PageResult;
+import com.lelexuetang.content.model.dto.AddCourseDto;
 import com.lelexuetang.content.model.dto.QueryCourseParamsDto;
 import com.lelexuetang.content.model.po.CourseBase;
 import com.lelexuetang.content.service.CourseBaseInfoService;
@@ -25,4 +26,11 @@ public class CourseBaseInfoServiceTest {
         PageResult<CourseBase> courseBasePageResult = courseBaseInfoService.queryCourseBaseList(pageParams, queryCourseParamsDto);
         System.out.println(courseBasePageResult);
     }
+
+    @Test
+    public void testCreateCourseBase() {
+        courseBaseInfoService.createCourseBase(1L, new AddCourseDto());
+    }
+
+
 }
