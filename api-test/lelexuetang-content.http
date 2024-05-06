@@ -1,0 +1,15 @@
+
+### 课程查询
+POST http://localhost:63040/content/course/list?pageNo=1&pageSize=10
+Content-Type: application/json
+
+{
+  "auditStatus": "",
+  "courseName": "java",
+  "publishStatus": ""
+}
+
+### 课程分类查询
+GET http://localhost:63040/content/course-category/tree-nodes
+Content-Type: application/json
+

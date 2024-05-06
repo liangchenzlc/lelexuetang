@@ -1,7 +1,10 @@
 package com.lelexuetang.content.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.lelexuetang.content.model.dto.CourseCategoryTreeDto;
 import com.lelexuetang.content.model.po.CourseCategory;
+
+import java.util.List;
 
 
 /**
@@ -12,5 +15,5 @@ import com.lelexuetang.content.model.po.CourseCategory;
  * @author itcast
  */
 public interface CourseCategoryMapper extends BaseMapper<CourseCategory> {
-
+    public List<CourseCategoryTreeDto> selectTreeNodes(String id);
 }

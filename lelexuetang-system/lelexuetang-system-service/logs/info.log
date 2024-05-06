@@ -1,0 +1,396 @@
+2024-05-06 19:49:18,502 DEBUG [background-preinit][LoggerProviders.java:152] - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2024-05-06 19:49:18,502 DEBUG [background-preinit][LoggerProviders.java:152] - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2024-05-06 19:49:18,507 INFO [background-preinit][Version.java:21] - HV000001: Hibernate Validator 6.1.6.Final
+2024-05-06 19:49:18,507 INFO [background-preinit][Version.java:21] - HV000001: Hibernate Validator 6.1.6.Final
+2024-05-06 19:49:18,513 DEBUG [background-preinit][ValidationXmlParser.java:120] - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2024-05-06 19:49:18,513 DEBUG [background-preinit][ValidationXmlParser.java:120] - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2024-05-06 19:49:18,514 DEBUG [background-preinit][ResourceLoaderHelper.java:60] - Trying to load META-INF/validation.xml via TCCL
+2024-05-06 19:49:18,514 DEBUG [background-preinit][ResourceLoaderHelper.java:60] - Trying to load META-INF/validation.xml via TCCL
+2024-05-06 19:49:18,515 DEBUG [background-preinit][ResourceLoaderHelper.java:66] - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2024-05-06 19:49:18,515 DEBUG [background-preinit][ResourceLoaderHelper.java:66] - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2024-05-06 19:49:18,515 DEBUG [background-preinit][ValidationXmlParser.java:127] - No META-INF/validation.xml found. Using annotation based configuration only.
+2024-05-06 19:49:18,515 DEBUG [background-preinit][ValidationXmlParser.java:127] - No META-INF/validation.xml found. Using annotation based configuration only.
+2024-05-06 19:49:18,519 DEBUG [background-preinit][TraversableResolvers.java:60] - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2024-05-06 19:49:18,519 DEBUG [background-preinit][TraversableResolvers.java:60] - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2024-05-06 19:49:18,539 DEBUG [background-preinit][ResourceBundleMessageInterpolator.java:172] - Loaded expression factory via original TCCL
+2024-05-06 19:49:18,539 DEBUG [background-preinit][ResourceBundleMessageInterpolator.java:172] - Loaded expression factory via original TCCL
+2024-05-06 19:49:18,638 DEBUG [background-preinit][ValidatorFactoryConfigurationHelper.java:300] - HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+2024-05-06 19:49:18,638 DEBUG [background-preinit][ValidatorFactoryConfigurationHelper.java:300] - HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+2024-05-06 19:49:18,644 DEBUG [background-preinit][ValidatorFactoryConfigurationHelper.java:375] - HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2024-05-06 19:49:18,644 DEBUG [background-preinit][ValidatorFactoryConfigurationHelper.java:375] - HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2024-05-06 19:49:18,644 DEBUG [background-preinit][ValidatorFactoryConfigurationHelper.java:376] - HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2024-05-06 19:49:18,644 DEBUG [background-preinit][ValidatorFactoryConfigurationHelper.java:376] - HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2024-05-06 19:49:18,644 DEBUG [background-preinit][ValidatorFactoryConfigurationHelper.java:377] - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2024-05-06 19:49:18,644 DEBUG [background-preinit][ValidatorFactoryConfigurationHelper.java:377] - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2024-05-06 19:49:18,645 DEBUG [background-preinit][ValidatorFactoryConfigurationHelper.java:378] - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2024-05-06 19:49:18,645 DEBUG [background-preinit][ValidatorFactoryConfigurationHelper.java:378] - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2024-05-06 19:49:18,645 DEBUG [background-preinit][ValidatorFactoryConfigurationHelper.java:379] - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2024-05-06 19:49:18,645 DEBUG [background-preinit][ValidatorFactoryConfigurationHelper.java:379] - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2024-05-06 19:49:19,004 DEBUG [main][LogFactory.java:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-05-06 19:49:19,004 DEBUG [main][LogFactory.java:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-05-06 19:49:19,324 DEBUG [main][HikariConfig.java:946] - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@63947c6b
+2024-05-06 19:49:19,324 DEBUG [main][HikariConfig.java:946] - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@63947c6b
+2024-05-06 19:49:19,407 DEBUG [main][Logger.java:49] - Registered plugin: 'com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor@352ed70d'
+2024-05-06 19:49:19,407 DEBUG [main][Logger.java:49] - Registered plugin: 'com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor@352ed70d'
+2024-05-06 19:49:19,409 DEBUG [main][Logger.java:49] - Property 'mapperLocations' was not specified.
+2024-05-06 19:49:19,409 DEBUG [main][Logger.java:49] - Property 'mapperLocations' was not specified.
+2024-05-06 19:49:19,557 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.insert
+2024-05-06 19:49:19,557 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.insert
+2024-05-06 19:49:19,562 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.delete
+2024-05-06 19:49:19,562 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.delete
+2024-05-06 19:49:19,575 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.deleteByMap
+2024-05-06 19:49:19,575 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.deleteByMap
+2024-05-06 19:49:19,603 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.deleteById
+2024-05-06 19:49:19,603 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.deleteById
+2024-05-06 19:49:19,607 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.deleteBatchIds
+2024-05-06 19:49:19,607 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.deleteBatchIds
+2024-05-06 19:49:19,612 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.update
+2024-05-06 19:49:19,612 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.update
+2024-05-06 19:49:19,614 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.updateById
+2024-05-06 19:49:19,614 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.updateById
+2024-05-06 19:49:19,616 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectById
+2024-05-06 19:49:19,616 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectById
+2024-05-06 19:49:19,618 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectBatchIds
+2024-05-06 19:49:19,618 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectBatchIds
+2024-05-06 19:49:19,621 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectByMap
+2024-05-06 19:49:19,621 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectByMap
+2024-05-06 19:49:19,624 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectOne
+2024-05-06 19:49:19,624 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectOne
+2024-05-06 19:49:19,628 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectCount
+2024-05-06 19:49:19,628 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectCount
+2024-05-06 19:49:19,631 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectMaps
+2024-05-06 19:49:19,631 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectMaps
+2024-05-06 19:49:19,634 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectMapsPage
+2024-05-06 19:49:19,634 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectMapsPage
+2024-05-06 19:49:19,638 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectObjs
+2024-05-06 19:49:19,638 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectObjs
+2024-05-06 19:49:19,642 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectList
+2024-05-06 19:49:19,642 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectList
+2024-05-06 19:49:19,646 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectPage
+2024-05-06 19:49:19,646 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectPage
+2024-05-06 19:49:19,720 DEBUG [main][ResourceBundleMessageInterpolator.java:172] - Loaded expression factory via original TCCL
+2024-05-06 19:49:19,720 DEBUG [main][ResourceBundleMessageInterpolator.java:172] - Loaded expression factory via original TCCL
+2024-05-06 19:49:19,730 DEBUG [main][AbstractConfigurationImpl.java:171] - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2024-05-06 19:49:19,730 DEBUG [main][AbstractConfigurationImpl.java:171] - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2024-05-06 19:49:19,731 DEBUG [main][AbstractConfigurationImpl.java:203] - Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2024-05-06 19:49:19,731 DEBUG [main][AbstractConfigurationImpl.java:203] - Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2024-05-06 19:49:19,732 DEBUG [main][AbstractConfigurationImpl.java:217] - Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+2024-05-06 19:49:19,732 DEBUG [main][AbstractConfigurationImpl.java:217] - Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+2024-05-06 19:49:19,733 DEBUG [main][ValidationXmlParser.java:120] - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2024-05-06 19:49:19,733 DEBUG [main][ValidationXmlParser.java:120] - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2024-05-06 19:49:19,734 DEBUG [main][ResourceLoaderHelper.java:53] - Trying to load META-INF/validation.xml via user class loader
+2024-05-06 19:49:19,734 DEBUG [main][ResourceLoaderHelper.java:53] - Trying to load META-INF/validation.xml via user class loader
+2024-05-06 19:49:19,734 DEBUG [main][ResourceLoaderHelper.java:60] - Trying to load META-INF/validation.xml via TCCL
+2024-05-06 19:49:19,734 DEBUG [main][ResourceLoaderHelper.java:60] - Trying to load META-INF/validation.xml via TCCL
+2024-05-06 19:49:19,734 DEBUG [main][ResourceLoaderHelper.java:66] - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2024-05-06 19:49:19,734 DEBUG [main][ResourceLoaderHelper.java:66] - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2024-05-06 19:49:19,735 DEBUG [main][ValidationXmlParser.java:127] - No META-INF/validation.xml found. Using annotation based configuration only.
+2024-05-06 19:49:19,735 DEBUG [main][ValidationXmlParser.java:127] - No META-INF/validation.xml found. Using annotation based configuration only.
+2024-05-06 19:49:19,736 DEBUG [main][TraversableResolvers.java:60] - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2024-05-06 19:49:19,736 DEBUG [main][TraversableResolvers.java:60] - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2024-05-06 19:49:19,738 DEBUG [main][ValidatorFactoryConfigurationHelper.java:300] - HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+2024-05-06 19:49:19,738 DEBUG [main][ValidatorFactoryConfigurationHelper.java:300] - HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+2024-05-06 19:49:19,738 DEBUG [main][ValidatorFactoryConfigurationHelper.java:375] - HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2024-05-06 19:49:19,738 DEBUG [main][ValidatorFactoryConfigurationHelper.java:375] - HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2024-05-06 19:49:19,739 DEBUG [main][ValidatorFactoryConfigurationHelper.java:376] - HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2024-05-06 19:49:19,739 DEBUG [main][ValidatorFactoryConfigurationHelper.java:376] - HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2024-05-06 19:49:19,739 DEBUG [main][ValidatorFactoryConfigurationHelper.java:377] - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2024-05-06 19:49:19,739 DEBUG [main][ValidatorFactoryConfigurationHelper.java:377] - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2024-05-06 19:49:19,739 DEBUG [main][ValidatorFactoryConfigurationHelper.java:378] - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2024-05-06 19:49:19,739 DEBUG [main][ValidatorFactoryConfigurationHelper.java:378] - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2024-05-06 19:49:19,740 DEBUG [main][ValidatorFactoryConfigurationHelper.java:379] - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2024-05-06 19:49:19,740 DEBUG [main][ValidatorFactoryConfigurationHelper.java:379] - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2024-05-06 19:51:10,676 DEBUG [background-preinit][LoggerProviders.java:152] - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2024-05-06 19:51:10,676 DEBUG [background-preinit][LoggerProviders.java:152] - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2024-05-06 19:51:10,681 INFO [background-preinit][Version.java:21] - HV000001: Hibernate Validator 6.1.6.Final
+2024-05-06 19:51:10,681 INFO [background-preinit][Version.java:21] - HV000001: Hibernate Validator 6.1.6.Final
+2024-05-06 19:51:10,687 DEBUG [background-preinit][ValidationXmlParser.java:120] - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2024-05-06 19:51:10,687 DEBUG [background-preinit][ValidationXmlParser.java:120] - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2024-05-06 19:51:10,689 DEBUG [background-preinit][ResourceLoaderHelper.java:60] - Trying to load META-INF/validation.xml via TCCL
+2024-05-06 19:51:10,689 DEBUG [background-preinit][ResourceLoaderHelper.java:60] - Trying to load META-INF/validation.xml via TCCL
+2024-05-06 19:51:10,690 DEBUG [background-preinit][ResourceLoaderHelper.java:66] - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2024-05-06 19:51:10,690 DEBUG [background-preinit][ResourceLoaderHelper.java:66] - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2024-05-06 19:51:10,690 DEBUG [background-preinit][ValidationXmlParser.java:127] - No META-INF/validation.xml found. Using annotation based configuration only.
+2024-05-06 19:51:10,690 DEBUG [background-preinit][ValidationXmlParser.java:127] - No META-INF/validation.xml found. Using annotation based configuration only.
+2024-05-06 19:51:10,693 DEBUG [background-preinit][TraversableResolvers.java:60] - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2024-05-06 19:51:10,693 DEBUG [background-preinit][TraversableResolvers.java:60] - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2024-05-06 19:51:10,715 DEBUG [background-preinit][ResourceBundleMessageInterpolator.java:172] - Loaded expression factory via original TCCL
+2024-05-06 19:51:10,715 DEBUG [background-preinit][ResourceBundleMessageInterpolator.java:172] - Loaded expression factory via original TCCL
+2024-05-06 19:51:10,812 DEBUG [background-preinit][ValidatorFactoryConfigurationHelper.java:300] - HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+2024-05-06 19:51:10,812 DEBUG [background-preinit][ValidatorFactoryConfigurationHelper.java:300] - HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+2024-05-06 19:51:10,818 DEBUG [background-preinit][ValidatorFactoryConfigurationHelper.java:375] - HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2024-05-06 19:51:10,818 DEBUG [background-preinit][ValidatorFactoryConfigurationHelper.java:375] - HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2024-05-06 19:51:10,818 DEBUG [background-preinit][ValidatorFactoryConfigurationHelper.java:376] - HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2024-05-06 19:51:10,818 DEBUG [background-preinit][ValidatorFactoryConfigurationHelper.java:376] - HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2024-05-06 19:51:10,819 DEBUG [background-preinit][ValidatorFactoryConfigurationHelper.java:377] - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2024-05-06 19:51:10,819 DEBUG [background-preinit][ValidatorFactoryConfigurationHelper.java:377] - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2024-05-06 19:51:10,819 DEBUG [background-preinit][ValidatorFactoryConfigurationHelper.java:378] - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2024-05-06 19:51:10,819 DEBUG [background-preinit][ValidatorFactoryConfigurationHelper.java:378] - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2024-05-06 19:51:10,819 DEBUG [background-preinit][ValidatorFactoryConfigurationHelper.java:379] - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2024-05-06 19:51:10,819 DEBUG [background-preinit][ValidatorFactoryConfigurationHelper.java:379] - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2024-05-06 19:51:11,523 DEBUG [main][LogFactory.java:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-05-06 19:51:11,523 DEBUG [main][LogFactory.java:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-05-06 19:51:11,600 INFO [main][GenericScope.java:295] - BeanFactory id=fb07c096-fc69-3589-ba99-6feb57ed7b9e
+2024-05-06 19:51:11,600 INFO [main][GenericScope.java:295] - BeanFactory id=fb07c096-fc69-3589-ba99-6feb57ed7b9e
+2024-05-06 19:51:11,807 DEBUG [main][HikariConfig.java:946] - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@63947c6b
+2024-05-06 19:51:11,807 DEBUG [main][HikariConfig.java:946] - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@63947c6b
+2024-05-06 19:51:11,893 DEBUG [main][Logger.java:49] - Registered plugin: 'com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor@2f9a4401'
+2024-05-06 19:51:11,893 DEBUG [main][Logger.java:49] - Registered plugin: 'com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor@2f9a4401'
+2024-05-06 19:51:11,896 DEBUG [main][Logger.java:49] - Property 'mapperLocations' was not specified.
+2024-05-06 19:51:11,896 DEBUG [main][Logger.java:49] - Property 'mapperLocations' was not specified.
+2024-05-06 19:51:12,061 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.insert
+2024-05-06 19:51:12,061 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.insert
+2024-05-06 19:51:12,067 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.delete
+2024-05-06 19:51:12,067 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.delete
+2024-05-06 19:51:12,073 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.deleteByMap
+2024-05-06 19:51:12,073 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.deleteByMap
+2024-05-06 19:51:12,103 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.deleteById
+2024-05-06 19:51:12,103 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.deleteById
+2024-05-06 19:51:12,107 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.deleteBatchIds
+2024-05-06 19:51:12,107 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.deleteBatchIds
+2024-05-06 19:51:12,111 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.update
+2024-05-06 19:51:12,111 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.update
+2024-05-06 19:51:12,114 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.updateById
+2024-05-06 19:51:12,114 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.updateById
+2024-05-06 19:51:12,115 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectById
+2024-05-06 19:51:12,115 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectById
+2024-05-06 19:51:12,118 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectBatchIds
+2024-05-06 19:51:12,118 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectBatchIds
+2024-05-06 19:51:12,122 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectByMap
+2024-05-06 19:51:12,122 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectByMap
+2024-05-06 19:51:12,125 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectOne
+2024-05-06 19:51:12,125 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectOne
+2024-05-06 19:51:12,128 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectCount
+2024-05-06 19:51:12,128 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectCount
+2024-05-06 19:51:12,131 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectMaps
+2024-05-06 19:51:12,131 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectMaps
+2024-05-06 19:51:12,133 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectMapsPage
+2024-05-06 19:51:12,133 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectMapsPage
+2024-05-06 19:51:12,136 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectObjs
+2024-05-06 19:51:12,136 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectObjs
+2024-05-06 19:51:12,139 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectList
+2024-05-06 19:51:12,139 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectList
+2024-05-06 19:51:12,141 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectPage
+2024-05-06 19:51:12,141 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectPage
+2024-05-06 19:51:12,211 DEBUG [main][ResourceBundleMessageInterpolator.java:172] - Loaded expression factory via original TCCL
+2024-05-06 19:51:12,211 DEBUG [main][ResourceBundleMessageInterpolator.java:172] - Loaded expression factory via original TCCL
+2024-05-06 19:51:12,218 DEBUG [main][AbstractConfigurationImpl.java:171] - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2024-05-06 19:51:12,218 DEBUG [main][AbstractConfigurationImpl.java:171] - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2024-05-06 19:51:12,219 DEBUG [main][AbstractConfigurationImpl.java:203] - Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2024-05-06 19:51:12,219 DEBUG [main][AbstractConfigurationImpl.java:203] - Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2024-05-06 19:51:12,220 DEBUG [main][AbstractConfigurationImpl.java:217] - Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+2024-05-06 19:51:12,220 DEBUG [main][AbstractConfigurationImpl.java:217] - Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+2024-05-06 19:51:12,221 DEBUG [main][ValidationXmlParser.java:120] - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2024-05-06 19:51:12,221 DEBUG [main][ValidationXmlParser.java:120] - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2024-05-06 19:51:12,222 DEBUG [main][ResourceLoaderHelper.java:53] - Trying to load META-INF/validation.xml via user class loader
+2024-05-06 19:51:12,222 DEBUG [main][ResourceLoaderHelper.java:53] - Trying to load META-INF/validation.xml via user class loader
+2024-05-06 19:51:12,222 DEBUG [main][ResourceLoaderHelper.java:60] - Trying to load META-INF/validation.xml via TCCL
+2024-05-06 19:51:12,222 DEBUG [main][ResourceLoaderHelper.java:60] - Trying to load META-INF/validation.xml via TCCL
+2024-05-06 19:51:12,222 DEBUG [main][ResourceLoaderHelper.java:66] - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2024-05-06 19:51:12,222 DEBUG [main][ResourceLoaderHelper.java:66] - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2024-05-06 19:51:12,223 DEBUG [main][ValidationXmlParser.java:127] - No META-INF/validation.xml found. Using annotation based configuration only.
+2024-05-06 19:51:12,223 DEBUG [main][ValidationXmlParser.java:127] - No META-INF/validation.xml found. Using annotation based configuration only.
+2024-05-06 19:51:12,223 DEBUG [main][TraversableResolvers.java:60] - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2024-05-06 19:51:12,223 DEBUG [main][TraversableResolvers.java:60] - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2024-05-06 19:51:12,225 DEBUG [main][ValidatorFactoryConfigurationHelper.java:300] - HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+2024-05-06 19:51:12,225 DEBUG [main][ValidatorFactoryConfigurationHelper.java:300] - HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+2024-05-06 19:51:12,225 DEBUG [main][ValidatorFactoryConfigurationHelper.java:375] - HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2024-05-06 19:51:12,225 DEBUG [main][ValidatorFactoryConfigurationHelper.java:375] - HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2024-05-06 19:51:12,226 DEBUG [main][ValidatorFactoryConfigurationHelper.java:376] - HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2024-05-06 19:51:12,226 DEBUG [main][ValidatorFactoryConfigurationHelper.java:376] - HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2024-05-06 19:51:12,226 DEBUG [main][ValidatorFactoryConfigurationHelper.java:377] - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2024-05-06 19:51:12,226 DEBUG [main][ValidatorFactoryConfigurationHelper.java:377] - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2024-05-06 19:51:12,226 DEBUG [main][ValidatorFactoryConfigurationHelper.java:378] - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2024-05-06 19:51:12,226 DEBUG [main][ValidatorFactoryConfigurationHelper.java:378] - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2024-05-06 19:51:12,226 DEBUG [main][ValidatorFactoryConfigurationHelper.java:379] - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2024-05-06 19:51:12,226 DEBUG [main][ValidatorFactoryConfigurationHelper.java:379] - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2024-05-06 19:52:29,247 DEBUG [background-preinit][LoggerProviders.java:152] - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2024-05-06 19:52:29,247 DEBUG [background-preinit][LoggerProviders.java:152] - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2024-05-06 19:52:29,250 INFO [background-preinit][Version.java:21] - HV000001: Hibernate Validator 6.1.6.Final
+2024-05-06 19:52:29,250 INFO [background-preinit][Version.java:21] - HV000001: Hibernate Validator 6.1.6.Final
+2024-05-06 19:52:29,256 DEBUG [background-preinit][ValidationXmlParser.java:120] - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2024-05-06 19:52:29,256 DEBUG [background-preinit][ValidationXmlParser.java:120] - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2024-05-06 19:52:29,257 DEBUG [background-preinit][ResourceLoaderHelper.java:60] - Trying to load META-INF/validation.xml via TCCL
+2024-05-06 19:52:29,257 DEBUG [background-preinit][ResourceLoaderHelper.java:60] - Trying to load META-INF/validation.xml via TCCL
+2024-05-06 19:52:29,258 DEBUG [background-preinit][ResourceLoaderHelper.java:66] - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2024-05-06 19:52:29,258 DEBUG [background-preinit][ResourceLoaderHelper.java:66] - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2024-05-06 19:52:29,258 DEBUG [background-preinit][ValidationXmlParser.java:127] - No META-INF/validation.xml found. Using annotation based configuration only.
+2024-05-06 19:52:29,258 DEBUG [background-preinit][ValidationXmlParser.java:127] - No META-INF/validation.xml found. Using annotation based configuration only.
+2024-05-06 19:52:29,261 DEBUG [background-preinit][TraversableResolvers.java:60] - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2024-05-06 19:52:29,261 DEBUG [background-preinit][TraversableResolvers.java:60] - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2024-05-06 19:52:29,281 DEBUG [background-preinit][ResourceBundleMessageInterpolator.java:172] - Loaded expression factory via original TCCL
+2024-05-06 19:52:29,281 DEBUG [background-preinit][ResourceBundleMessageInterpolator.java:172] - Loaded expression factory via original TCCL
+2024-05-06 19:52:29,368 DEBUG [background-preinit][ValidatorFactoryConfigurationHelper.java:300] - HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+2024-05-06 19:52:29,368 DEBUG [background-preinit][ValidatorFactoryConfigurationHelper.java:300] - HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+2024-05-06 19:52:29,373 DEBUG [background-preinit][ValidatorFactoryConfigurationHelper.java:375] - HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2024-05-06 19:52:29,373 DEBUG [background-preinit][ValidatorFactoryConfigurationHelper.java:375] - HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2024-05-06 19:52:29,374 DEBUG [background-preinit][ValidatorFactoryConfigurationHelper.java:376] - HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2024-05-06 19:52:29,374 DEBUG [background-preinit][ValidatorFactoryConfigurationHelper.java:376] - HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2024-05-06 19:52:29,374 DEBUG [background-preinit][ValidatorFactoryConfigurationHelper.java:377] - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2024-05-06 19:52:29,374 DEBUG [background-preinit][ValidatorFactoryConfigurationHelper.java:377] - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2024-05-06 19:52:29,374 DEBUG [background-preinit][ValidatorFactoryConfigurationHelper.java:378] - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2024-05-06 19:52:29,374 DEBUG [background-preinit][ValidatorFactoryConfigurationHelper.java:378] - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2024-05-06 19:52:29,374 DEBUG [background-preinit][ValidatorFactoryConfigurationHelper.java:379] - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2024-05-06 19:52:29,374 DEBUG [background-preinit][ValidatorFactoryConfigurationHelper.java:379] - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2024-05-06 19:52:29,926 DEBUG [main][LogFactory.java:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-05-06 19:52:29,926 DEBUG [main][LogFactory.java:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2024-05-06 19:52:29,999 INFO [main][GenericScope.java:295] - BeanFactory id=fb07c096-fc69-3589-ba99-6feb57ed7b9e
+2024-05-06 19:52:29,999 INFO [main][GenericScope.java:295] - BeanFactory id=fb07c096-fc69-3589-ba99-6feb57ed7b9e
+2024-05-06 19:52:30,181 DEBUG [main][HikariConfig.java:946] - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@63947c6b
+2024-05-06 19:52:30,181 DEBUG [main][HikariConfig.java:946] - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@63947c6b
+2024-05-06 19:52:30,243 DEBUG [main][Logger.java:49] - Registered plugin: 'com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor@2f9a4401'
+2024-05-06 19:52:30,243 DEBUG [main][Logger.java:49] - Registered plugin: 'com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor@2f9a4401'
+2024-05-06 19:52:30,244 DEBUG [main][Logger.java:49] - Property 'mapperLocations' was not specified.
+2024-05-06 19:52:30,244 DEBUG [main][Logger.java:49] - Property 'mapperLocations' was not specified.
+2024-05-06 19:52:30,372 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.insert
+2024-05-06 19:52:30,372 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.insert
+2024-05-06 19:52:30,376 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.delete
+2024-05-06 19:52:30,376 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.delete
+2024-05-06 19:52:30,380 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.deleteByMap
+2024-05-06 19:52:30,380 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.deleteByMap
+2024-05-06 19:52:30,404 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.deleteById
+2024-05-06 19:52:30,404 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.deleteById
+2024-05-06 19:52:30,406 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.deleteBatchIds
+2024-05-06 19:52:30,406 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.deleteBatchIds
+2024-05-06 19:52:30,411 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.update
+2024-05-06 19:52:30,411 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.update
+2024-05-06 19:52:30,414 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.updateById
+2024-05-06 19:52:30,414 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.updateById
+2024-05-06 19:52:30,415 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectById
+2024-05-06 19:52:30,415 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectById
+2024-05-06 19:52:30,419 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectBatchIds
+2024-05-06 19:52:30,419 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectBatchIds
+2024-05-06 19:52:30,423 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectByMap
+2024-05-06 19:52:30,423 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectByMap
+2024-05-06 19:52:30,427 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectOne
+2024-05-06 19:52:30,427 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectOne
+2024-05-06 19:52:30,431 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectCount
+2024-05-06 19:52:30,431 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectCount
+2024-05-06 19:52:30,436 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectMaps
+2024-05-06 19:52:30,436 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectMaps
+2024-05-06 19:52:30,440 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectMapsPage
+2024-05-06 19:52:30,440 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectMapsPage
+2024-05-06 19:52:30,443 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectObjs
+2024-05-06 19:52:30,443 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectObjs
+2024-05-06 19:52:30,447 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectList
+2024-05-06 19:52:30,447 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectList
+2024-05-06 19:52:30,450 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectPage
+2024-05-06 19:52:30,450 DEBUG [main][MybatisConfiguration.java:128] - addMappedStatement: com.lelexuetang.system.mapper.DictionaryMapper.selectPage
+2024-05-06 19:52:30,520 DEBUG [main][ResourceBundleMessageInterpolator.java:172] - Loaded expression factory via original TCCL
+2024-05-06 19:52:30,520 DEBUG [main][ResourceBundleMessageInterpolator.java:172] - Loaded expression factory via original TCCL
+2024-05-06 19:52:30,526 DEBUG [main][AbstractConfigurationImpl.java:171] - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2024-05-06 19:52:30,526 DEBUG [main][AbstractConfigurationImpl.java:171] - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2024-05-06 19:52:30,527 DEBUG [main][AbstractConfigurationImpl.java:203] - Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2024-05-06 19:52:30,527 DEBUG [main][AbstractConfigurationImpl.java:203] - Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2024-05-06 19:52:30,527 DEBUG [main][AbstractConfigurationImpl.java:217] - Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+2024-05-06 19:52:30,527 DEBUG [main][AbstractConfigurationImpl.java:217] - Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+2024-05-06 19:52:30,528 DEBUG [main][ValidationXmlParser.java:120] - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2024-05-06 19:52:30,528 DEBUG [main][ValidationXmlParser.java:120] - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2024-05-06 19:52:30,529 DEBUG [main][ResourceLoaderHelper.java:53] - Trying to load META-INF/validation.xml via user class loader
+2024-05-06 19:52:30,529 DEBUG [main][ResourceLoaderHelper.java:53] - Trying to load META-INF/validation.xml via user class loader
+2024-05-06 19:52:30,529 DEBUG [main][ResourceLoaderHelper.java:60] - Trying to load META-INF/validation.xml via TCCL
+2024-05-06 19:52:30,529 DEBUG [main][ResourceLoaderHelper.java:60] - Trying to load META-INF/validation.xml via TCCL
+2024-05-06 19:52:30,529 DEBUG [main][ResourceLoaderHelper.java:66] - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2024-05-06 19:52:30,529 DEBUG [main][ResourceLoaderHelper.java:66] - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2024-05-06 19:52:30,530 DEBUG [main][ValidationXmlParser.java:127] - No META-INF/validation.xml found. Using annotation based configuration only.
+2024-05-06 19:52:30,530 DEBUG [main][ValidationXmlParser.java:127] - No META-INF/validation.xml found. Using annotation based configuration only.
+2024-05-06 19:52:30,530 DEBUG [main][TraversableResolvers.java:60] - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2024-05-06 19:52:30,530 DEBUG [main][TraversableResolvers.java:60] - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2024-05-06 19:52:30,532 DEBUG [main][ValidatorFactoryConfigurationHelper.java:300] - HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+2024-05-06 19:52:30,532 DEBUG [main][ValidatorFactoryConfigurationHelper.java:300] - HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+2024-05-06 19:52:30,532 DEBUG [main][ValidatorFactoryConfigurationHelper.java:375] - HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2024-05-06 19:52:30,532 DEBUG [main][ValidatorFactoryConfigurationHelper.java:375] - HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2024-05-06 19:52:30,532 DEBUG [main][ValidatorFactoryConfigurationHelper.java:376] - HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2024-05-06 19:52:30,532 DEBUG [main][ValidatorFactoryConfigurationHelper.java:376] - HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2024-05-06 19:52:30,532 DEBUG [main][ValidatorFactoryConfigurationHelper.java:377] - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2024-05-06 19:52:30,532 DEBUG [main][ValidatorFactoryConfigurationHelper.java:377] - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2024-05-06 19:52:30,533 DEBUG [main][ValidatorFactoryConfigurationHelper.java:378] - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2024-05-06 19:52:30,533 DEBUG [main][ValidatorFactoryConfigurationHelper.java:378] - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2024-05-06 19:52:30,533 DEBUG [main][ValidatorFactoryConfigurationHelper.java:379] - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2024-05-06 19:52:30,533 DEBUG [main][ValidatorFactoryConfigurationHelper.java:379] - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2024-05-06 19:52:31,047 DEBUG [main][HikariConfig.java:1066] - HikariPool-1 - configuration:
+2024-05-06 19:52:31,047 DEBUG [main][HikariConfig.java:1066] - HikariPool-1 - configuration:
+2024-05-06 19:52:31,049 DEBUG [main][HikariConfig.java:1098] - allowPoolSuspension.............false
+2024-05-06 19:52:31,049 DEBUG [main][HikariConfig.java:1098] - allowPoolSuspension.............false
+2024-05-06 19:52:31,050 DEBUG [main][HikariConfig.java:1098] - autoCommit......................true
+2024-05-06 19:52:31,050 DEBUG [main][HikariConfig.java:1098] - autoCommit......................true
+2024-05-06 19:52:31,050 DEBUG [main][HikariConfig.java:1098] - catalog.........................none
+2024-05-06 19:52:31,050 DEBUG [main][HikariConfig.java:1098] - catalog.........................none
+2024-05-06 19:52:31,050 DEBUG [main][HikariConfig.java:1098] - connectionInitSql...............none
+2024-05-06 19:52:31,050 DEBUG [main][HikariConfig.java:1098] - connectionInitSql...............none
+2024-05-06 19:52:31,050 DEBUG [main][HikariConfig.java:1098] - connectionTestQuery.............none
+2024-05-06 19:52:31,050 DEBUG [main][HikariConfig.java:1098] - connectionTestQuery.............none
+2024-05-06 19:52:31,051 DEBUG [main][HikariConfig.java:1098] - connectionTimeout...............30000
+2024-05-06 19:52:31,051 DEBUG [main][HikariConfig.java:1098] - connectionTimeout...............30000
+2024-05-06 19:52:31,051 DEBUG [main][HikariConfig.java:1098] - dataSource......................none
+2024-05-06 19:52:31,051 DEBUG [main][HikariConfig.java:1098] - dataSource......................none
+2024-05-06 19:52:31,051 DEBUG [main][HikariConfig.java:1098] - dataSourceClassName.............none
+2024-05-06 19:52:31,051 DEBUG [main][HikariConfig.java:1098] - dataSourceClassName.............none
+2024-05-06 19:52:31,051 DEBUG [main][HikariConfig.java:1098] - dataSourceJNDI..................none
+2024-05-06 19:52:31,051 DEBUG [main][HikariConfig.java:1098] - dataSourceJNDI..................none
+2024-05-06 19:52:31,052 DEBUG [main][HikariConfig.java:1098] - dataSourceProperties............{password=<masked>}
+2024-05-06 19:52:31,052 DEBUG [main][HikariConfig.java:1098] - dataSourceProperties............{password=<masked>}
+2024-05-06 19:52:31,052 DEBUG [main][HikariConfig.java:1098] - driverClassName................."com.mysql.cj.jdbc.Driver"
+2024-05-06 19:52:31,052 DEBUG [main][HikariConfig.java:1098] - driverClassName................."com.mysql.cj.jdbc.Driver"
+2024-05-06 19:52:31,052 DEBUG [main][HikariConfig.java:1098] - exceptionOverrideClassName......none
+2024-05-06 19:52:31,052 DEBUG [main][HikariConfig.java:1098] - exceptionOverrideClassName......none
+2024-05-06 19:52:31,053 DEBUG [main][HikariConfig.java:1098] - healthCheckProperties...........{}
+2024-05-06 19:52:31,053 DEBUG [main][HikariConfig.java:1098] - healthCheckProperties...........{}
+2024-05-06 19:52:31,053 DEBUG [main][HikariConfig.java:1098] - healthCheckRegistry.............none
+2024-05-06 19:52:31,053 DEBUG [main][HikariConfig.java:1098] - healthCheckRegistry.............none
+2024-05-06 19:52:31,053 DEBUG [main][HikariConfig.java:1098] - idleTimeout.....................600000
+2024-05-06 19:52:31,053 DEBUG [main][HikariConfig.java:1098] - idleTimeout.....................600000
+2024-05-06 19:52:31,053 DEBUG [main][HikariConfig.java:1098] - initializationFailTimeout.......1
+2024-05-06 19:52:31,053 DEBUG [main][HikariConfig.java:1098] - initializationFailTimeout.......1
+2024-05-06 19:52:31,054 DEBUG [main][HikariConfig.java:1098] - isolateInternalQueries..........false
+2024-05-06 19:52:31,054 DEBUG [main][HikariConfig.java:1098] - isolateInternalQueries..........false
+2024-05-06 19:52:31,054 DEBUG [main][HikariConfig.java:1098] - jdbcUrl.........................jdbc:mysql://192.168.101.65:3306/xcplus_system?serverTimezone=UTC&userUnicode=true&useSSL=false&
+2024-05-06 19:52:31,054 DEBUG [main][HikariConfig.java:1098] - jdbcUrl.........................jdbc:mysql://192.168.101.65:3306/xcplus_system?serverTimezone=UTC&userUnicode=true&useSSL=false&
+2024-05-06 19:52:31,054 DEBUG [main][HikariConfig.java:1098] - leakDetectionThreshold..........0
+2024-05-06 19:52:31,054 DEBUG [main][HikariConfig.java:1098] - leakDetectionThreshold..........0
+2024-05-06 19:52:31,054 DEBUG [main][HikariConfig.java:1098] - maxLifetime.....................1800000
+2024-05-06 19:52:31,054 DEBUG [main][HikariConfig.java:1098] - maxLifetime.....................1800000
+2024-05-06 19:52:31,055 DEBUG [main][HikariConfig.java:1098] - maximumPoolSize.................10
+2024-05-06 19:52:31,055 DEBUG [main][HikariConfig.java:1098] - maximumPoolSize.................10
+2024-05-06 19:52:31,055 DEBUG [main][HikariConfig.java:1098] - metricRegistry..................none
+2024-05-06 19:52:31,055 DEBUG [main][HikariConfig.java:1098] - metricRegistry..................none
+2024-05-06 19:52:31,055 DEBUG [main][HikariConfig.java:1098] - metricsTrackerFactory...........none
+2024-05-06 19:52:31,055 DEBUG [main][HikariConfig.java:1098] - metricsTrackerFactory...........none
+2024-05-06 19:52:31,055 DEBUG [main][HikariConfig.java:1098] - minimumIdle.....................10
+2024-05-06 19:52:31,055 DEBUG [main][HikariConfig.java:1098] - minimumIdle.....................10
+2024-05-06 19:52:31,056 DEBUG [main][HikariConfig.java:1098] - password........................<masked>
+2024-05-06 19:52:31,056 DEBUG [main][HikariConfig.java:1098] - password........................<masked>
+2024-05-06 19:52:31,056 DEBUG [main][HikariConfig.java:1098] - poolName........................"HikariPool-1"
+2024-05-06 19:52:31,056 DEBUG [main][HikariConfig.java:1098] - poolName........................"HikariPool-1"
+2024-05-06 19:52:31,056 DEBUG [main][HikariConfig.java:1098] - readOnly........................false
+2024-05-06 19:52:31,056 DEBUG [main][HikariConfig.java:1098] - readOnly........................false
+2024-05-06 19:52:31,056 DEBUG [main][HikariConfig.java:1098] - registerMbeans..................false
+2024-05-06 19:52:31,056 DEBUG [main][HikariConfig.java:1098] - registerMbeans..................false
+2024-05-06 19:52:31,056 DEBUG [main][HikariConfig.java:1098] - scheduledExecutor...............none
+2024-05-06 19:52:31,056 DEBUG [main][HikariConfig.java:1098] - scheduledExecutor...............none
+2024-05-06 19:52:31,057 DEBUG [main][HikariConfig.java:1098] - schema..........................none
+2024-05-06 19:52:31,057 DEBUG [main][HikariConfig.java:1098] - schema..........................none
+2024-05-06 19:52:31,057 DEBUG [main][HikariConfig.java:1098] - threadFactory...................internal
+2024-05-06 19:52:31,057 DEBUG [main][HikariConfig.java:1098] - threadFactory...................internal
+2024-05-06 19:52:31,057 DEBUG [main][HikariConfig.java:1098] - transactionIsolation............default
+2024-05-06 19:52:31,057 DEBUG [main][HikariConfig.java:1098] - transactionIsolation............default
+2024-05-06 19:52:31,057 DEBUG [main][HikariConfig.java:1098] - username........................"root"
+2024-05-06 19:52:31,057 DEBUG [main][HikariConfig.java:1098] - username........................"root"
+2024-05-06 19:52:31,057 DEBUG [main][HikariConfig.java:1098] - validationTimeout...............5000
+2024-05-06 19:52:31,057 DEBUG [main][HikariConfig.java:1098] - validationTimeout...............5000
+2024-05-06 19:52:31,058 INFO [main][HikariDataSource.java:110] - HikariPool-1 - Starting...
+2024-05-06 19:52:31,058 INFO [main][HikariDataSource.java:110] - HikariPool-1 - Starting...
+2024-05-06 19:52:31,236 DEBUG [main][HikariPool.java:564] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6c9bf3b5
+2024-05-06 19:52:31,236 DEBUG [main][HikariPool.java:564] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6c9bf3b5
+2024-05-06 19:52:31,238 INFO [main][HikariDataSource.java:123] - HikariPool-1 - Start completed.
+2024-05-06 19:52:31,238 INFO [main][HikariDataSource.java:123] - HikariPool-1 - Start completed.
+2024-05-06 19:52:31,318 INFO [SpringContextShutdownHook][HikariDataSource.java:350] - HikariPool-1 - Shutdown initiated...
+2024-05-06 19:52:31,318 INFO [SpringContextShutdownHook][HikariDataSource.java:350] - HikariPool-1 - Shutdown initiated...
+2024-05-06 19:52:31,319 DEBUG [SpringContextShutdownHook][HikariPool.java:421] - HikariPool-1 - Before shutdown stats (total=1, active=0, idle=1, waiting=0)
+2024-05-06 19:52:31,319 DEBUG [SpringContextShutdownHook][HikariPool.java:421] - HikariPool-1 - Before shutdown stats (total=1, active=0, idle=1, waiting=0)
+2024-05-06 19:52:31,322 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6c9bf3b5: (connection evicted)
+2024-05-06 19:52:31,322 DEBUG [HikariPool-1 connection closer][PoolBase.java:134] - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6c9bf3b5: (connection evicted)
+2024-05-06 19:52:31,331 DEBUG [SpringContextShutdownHook][HikariPool.java:421] - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2024-05-06 19:52:31,331 DEBUG [SpringContextShutdownHook][HikariPool.java:421] - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2024-05-06 19:52:31,332 INFO [SpringContextShutdownHook][HikariDataSource.java:352] - HikariPool-1 - Shutdown completed.
+2024-05-06 19:52:31,332 INFO [SpringContextShutdownHook][HikariDataSource.java:352] - HikariPool-1 - Shutdown completed.
