@@ -26,5 +26,44 @@
     <sql id="Base_Column_List">
         id, pname, parentid, grade, media_type, start_time, end_time, description, timelength, orderby, course_id, course_pub_id, status, is_preview, create_date, change_date
     </sql>
+    <resultMap id="selectTreeNotesResultMap" type="com.lelexuetang.content.model.dto.TeachplanDto">
+        <id column="teachplan_id" property="id"/>
+        <result column="teachplan_name" property="pname" />
+        <result column="parentid" property="parentid" />
+        <result column="grade" property="grade" />
+        <result column="media_type" property="mediaType" />
+        <result column="start_time" property="startTime" />
+        <result column="end_time" property="endTime" />
+        <result column="orderby" property="orderby"/>
+        <result column="course_id" property="courseId" />
+        <result column="course_pub_id" property="coursePubId" />
+        <association property="teachplanMedia" javaType="com.lelexuetang.content.model.po.TeachplanMedia">
+            <id column="teachplan_media_id" property="id"/>
+            <result column="media_fileName" property="mediaFilename" />
+            <result column="media_id" property="mediaId"/>
+        </association>
+    </resultMap>
+    <select id="selectTreeNotes" parameterType="java.lang.Long" resultMap="selectTreeNotesResultMap">
+        with recursive t1 as (
+            select * from teachplan t where t.course_id = #{courseId} and t.parentid = '0'
+            union all
+            select t.* from teachplan t inner join t1 on t.parentid = t1.id
+        )
+        select
+            t1.id as teachplan_id,
+            t1.pname as teachplan_name,
+            t1.parentid as parentid,
+            t1.grade as grade,
+            t1.media_type as media_type,
+            t1.start_time as start_time,
+            t1.end_time as end_time,
+            t1.orderby as orderby,
+            t1.course_id as course_id,
+            t1.course_pub_id as course_pub_id,
+            tm.media_fileName as media_fileName,
+            tm.id as teachplan_media_id,
+            tm.media_id as media_id
+        from t1 left join teachplan_media tm on t1.id = tm.teachplan_id order by t1.orderby;
+    </select>
 
 </mapper>
