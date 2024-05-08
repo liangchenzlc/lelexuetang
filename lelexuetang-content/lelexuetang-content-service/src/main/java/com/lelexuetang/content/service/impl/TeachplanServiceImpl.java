@@ -1,12 +1,15 @@
 package com.lelexuetang.content.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
 import com.lelexuetang.base.exception.CommonError;
 import com.lelexuetang.base.exception.LeLeXueTangException;
 import com.lelexuetang.content.mapper.TeachplanMapper;
+import com.lelexuetang.content.mapper.TeachplanMediaMapper;
 import com.lelexuetang.content.model.dto.SaveTeachplanDto;
 import com.lelexuetang.content.model.dto.TeachplanDto;
 import com.lelexuetang.content.model.po.Teachplan;
+import com.lelexuetang.content.model.po.TeachplanMedia;
 import com.lelexuetang.content.service.TeachplanService;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -26,7 +29,8 @@ public class TeachplanServiceImpl implements TeachplanService {
     @Autowired
     private TeachplanMapper teachplanMapper;
 
-
+    @Autowired
+    private TeachplanMediaMapper teachplanMediaMapper;
     /**
      * 查找指定课程ID的课程教学计划树
      *
@@ -70,7 +74,7 @@ public class TeachplanServiceImpl implements TeachplanService {
         LambdaQueryWrapper<Teachplan> queryWrapper = new LambdaQueryWrapper<>();
         queryWrapper.eq(Teachplan::getCourseId, courseId)
                 .eq(Teachplan::getParentid, parentId);
-        return teachplanMapper.selectCount(queryWrapper) + 1;
+        return teachplanMapper.selectCount(queryWrapper);
     }
 
     @Transactional
@@ -95,7 +99,7 @@ public class TeachplanServiceImpl implements TeachplanService {
             // 保证参数不为空，使用Optional避免直接null
             int orderBy = Optional.ofNullable(getOrderBy(teachplanDto.getCourseId(), teachplanDto.getParentid()))
                     .orElseThrow(() -> new LeLeXueTangException("获取排序值时发生错误"));
-            teachplan.setOrderby(orderBy);
+            teachplan.setOrderby(orderBy + 1);
             teachplanMapper.insert(teachplan);
         } else {
             // 修改
@@ -107,5 +111,103 @@ public class TeachplanServiceImpl implements TeachplanService {
 
             teachplanMapper.updateById(teachplan);
         }
+    }
+
+    /**
+     * 删除教学计划
+     * @param id
+     */
+    @Transactional
+    @Override
+    public void deleteTeachplan(Long id) {
+        Teachplan teachplan = teachplanMapper.selectById(id);
+        if(teachplan == null) {
+            LeLeXueTangException.cast("教学计划不存在");
+        }
+        // 处理父节点
+        if(teachplan.getParentid().equals(0L)) {
+            // 先查询是否有子节点
+            int childrenCount = selectChildrenById(teachplan);
+            if(childrenCount > 0) {
+                LeLeXueTangException.cast("课程计划信息还有子级信息，无法操作");
+            }
+            teachplanMapper.deleteById(id);
+        }else {
+            // 删除子节点
+            // 删除课程计划表
+            teachplanMapper.deleteById(id);
+            LambdaUpdateWrapper<TeachplanMedia> deleteWrapper = new LambdaUpdateWrapper<TeachplanMedia>();
+            deleteWrapper.eq(TeachplanMedia::getTeachplanId, teachplan.getId());
+            // 删除课程计划媒资信息表
+            teachplanMediaMapper.delete(deleteWrapper);
+            // todo: 删除课程媒资信息表
+        }
+    }
+
+    /**
+     * 课程计划排序-向下移动
+     * @param id
+     */
+    @Transactional
+    @Override
+    public void moveDown(Long id) {
+        Teachplan teachplan = teachplanMapper.selectById(id);
+        if(teachplan == null) {
+            LeLeXueTangException.cast("教学计划不存在");
+        }
+        int orderby = teachplan.getOrderby();
+        // orderBy < orderCount
+        LambdaQueryWrapper<Teachplan> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(Teachplan::getCourseId, teachplan.getCourseId())
+                .eq(Teachplan::getParentid, teachplan.getParentid())
+                .gt(Teachplan::getOrderby, orderby)
+                .orderByAsc(Teachplan::getOrderby)
+                .last("limit 0, 1");
+
+        Teachplan teachplan1 = teachplanMapper.selectOne(queryWrapper);
+        if(teachplan1 == null) {
+            LeLeXueTangException.cast("不存在下一个节点，无法向下移动");
+        }
+        teachplan.setOrderby(teachplan1.getOrderby());
+        teachplan1.setOrderby(orderby);
+        teachplanMapper.updateById(teachplan);
+        teachplanMapper.updateById(teachplan1);
+    }
+
+
+    /**
+     * 课程计划排序-向上移动
+     * @param id
+     */
+    @Transactional
+    @Override
+    public void moveUp(Long id) {
+        Teachplan teachplan = teachplanMapper.selectById(id);
+        if (teachplan == null) {
+            LeLeXueTangException.cast("教学计划不存在");
+        }
+        int orderby = teachplan.getOrderby();
+        if (orderby == 1) {
+            LeLeXueTangException.cast("不存在上一个节点，无法向上移动");
+        }
+        LambdaQueryWrapper<Teachplan> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(Teachplan::getCourseId, teachplan.getCourseId())
+                .eq(Teachplan::getParentid, teachplan.getParentid())
+                .lt(Teachplan::getOrderby, orderby)
+                .orderByDesc(Teachplan::getOrderby)
+                .last("limit 0, 1");
+        Teachplan teachplan1 = teachplanMapper.selectOne(queryWrapper);
+        teachplan.setOrderby(teachplan1.getOrderby());
+        teachplan1.setOrderby(orderby);
+        teachplanMapper.updateById(teachplan);
+        teachplanMapper.updateById(teachplan1);
+
+    }
+
+    private int selectChildrenById(Teachplan teachplan) {
+        LambdaQueryWrapper<Teachplan> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(Teachplan::getParentid, teachplan.getId())
+                .eq(Teachplan::getCourseId, teachplan.getCourseId());
+        return teachplanMapper.selectCount(queryWrapper);
     }
 }

@@ -5,18 +5,15 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.lelexuetang.base.exception.LeLeXueTangException;
 import com.lelexuetang.base.model.PageParams;
 import com.lelexuetang.base.model.PageResult;
-import com.lelexuetang.content.mapper.CourseBaseMapper;
-import com.lelexuetang.content.mapper.CourseCategoryMapper;
-import com.lelexuetang.content.mapper.CourseMarketMapper;
+import com.lelexuetang.content.mapper.*;
 import com.lelexuetang.content.model.dto.AddCourseDto;
 import com.lelexuetang.content.model.dto.CourseBaseInfoDto;
 import com.lelexuetang.content.model.dto.EditCourseDto;
 import com.lelexuetang.content.model.dto.QueryCourseParamsDto;
-import com.lelexuetang.content.model.po.CourseBase;
-import com.lelexuetang.content.model.po.CourseCategory;
-import com.lelexuetang.content.model.po.CourseMarket;
+import com.lelexuetang.content.model.po.*;
 import com.lelexuetang.content.service.CourseBaseInfoService;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang.CharSetUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +32,15 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
 
     @Autowired
     CourseMarketMapper courseMarketMapper;
+
+    @Autowired
+    CourseTeacherMapper courseTeacherMapper;
+
+    @Autowired
+    TeachplanMapper teachplanMapper;
+
+    @Autowired
+    TeachplanMediaMapper teachplanMediaMapper;
 
     @Autowired
     CourseCategoryMapper courseCategoryMapper;
@@ -149,6 +155,23 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
             LeLeXueTangException.cast("修改课程营销信息失败");
         }
         return getCourseBaseInfo(courseBase.getId());
+    }
+
+    @Transactional
+    @Override
+    public void deleteCourseBase(Long courseId) {
+        CourseBase courseBase = courseBaseMapper.selectById(courseId);
+        if(courseBase.getAuditStatus().equals("202004")) {
+            LeLeXueTangException.cast("课程已发布，不能删除");
+        }
+        // 删除课程基础信息
+        courseBaseMapper.deleteById(courseId);
+        // 删除课程营销信息
+        courseMarketMapper.deleteById(courseId);
+        // 删除课程计划信息
+        teachplanMapper.delete(new QueryWrapper<Teachplan>().eq("course_id", courseId));
+        // 删除课程教师信息
+        courseTeacherMapper.delete(new QueryWrapper<CourseTeacher>().eq("course_id", courseId));
     }
 
     /**
