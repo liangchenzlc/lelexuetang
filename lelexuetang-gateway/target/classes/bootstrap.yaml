@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: lelexuetang-gateway
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      server-addr: 192.168.101.65:8848
+      username: nacos
+      password: nacos
+      discovery:
+        namespace: dev
+        group: lelexuetang-project
+        register-enabled: true
+      config:
+        file-extension: yaml
+        namespace: dev
+        group: lelexuetang-project
+        shared-configs:
+          - data-id: logger-share.yaml
+            group: lelexuetang-common
+            refresh: true
+        refresh-enabled: true
+

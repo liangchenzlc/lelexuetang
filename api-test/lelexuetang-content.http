@@ -1,6 +1,6 @@
 
 ### 课程查询
-POST http://{{baseUrl}}/content/course/list?pageNo=1&pageSize=10
+POST http://{{gateway-url}}/content/course/list?pageNo=1&pageSize=10
 Content-Type: application/json
 
 {

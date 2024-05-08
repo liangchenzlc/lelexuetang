@@ -1,23 +1,34 @@
-server:
-  servlet:
-    context-path: /content
-  port: 63040
 #微服务配置
 spring:
   application:
     name: content-api
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.101.65:3306/xcplus_content?serverTimezone=UTC&userUnicode=true&useSSL=false&
-    username: root
-    password: mysql
-# 日志文件配置路径
-logging:
-  config: classpath:log4j2-dev.xml
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        namespace: dev
+        group: lelexuetang-project
+        register-enabled: true
+        service: ${spring.application.name}
+      server-addr: 192.168.101.65:8848
+      config:
+        namespace: dev
+        group: lelexuetang-project
+        file-extension: yaml
+        refresh-enabled: true
+        extension-configs:
+          - data-id: content-service-${spring.profiles.active}.yaml
+            group: lelexuetang-project
+            refresh: true
+        shared-configs:
+          - data-id: swagger-share.yaml
+            group: lelexuetang-common
+            refresh: true
+          - data-id: logger-share.yaml
+            group: lelexuetang-common
+            refresh: true
+      username: nacos
+      password: nacos
 
-swagger:
-  title: "乐乐学堂在线内容管理系统"
-  description: "内容系统管理系统对课程相关信息进行管理"
-  base-package: com.lelexuetang.content
-  enabled: true
-  version: 1.0.0
+

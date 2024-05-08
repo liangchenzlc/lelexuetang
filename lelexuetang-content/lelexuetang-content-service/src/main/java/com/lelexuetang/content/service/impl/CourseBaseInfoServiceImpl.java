@@ -161,17 +161,18 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
     @Override
     public void deleteCourseBase(Long courseId) {
         CourseBase courseBase = courseBaseMapper.selectById(courseId);
-        if(courseBase.getAuditStatus().equals("202004")) {
-            LeLeXueTangException.cast("课程已发布，不能删除");
+        if(courseBase.getAuditStatus().equals("202002")) {
+            // 删除课程基础信息
+            courseBaseMapper.deleteById(courseId);
+            // 删除课程营销信息
+            courseMarketMapper.deleteById(courseId);
+            // 删除课程计划信息
+            teachplanMapper.delete(new QueryWrapper<Teachplan>().eq("course_id", courseId));
+            // 删除课程教师信息
+            courseTeacherMapper.delete(new QueryWrapper<CourseTeacher>().eq("course_id", courseId));
+        }else {
+            LeLeXueTangException.cast("只有未提交的课程才能删除");
         }
-        // 删除课程基础信息
-        courseBaseMapper.deleteById(courseId);
-        // 删除课程营销信息
-        courseMarketMapper.deleteById(courseId);
-        // 删除课程计划信息
-        teachplanMapper.delete(new QueryWrapper<Teachplan>().eq("course_id", courseId));
-        // 删除课程教师信息
-        courseTeacherMapper.delete(new QueryWrapper<CourseTeacher>().eq("course_id", courseId));
     }
 
     /**
