@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>lelexuetang-parent</artifactId>
+        <groupId>com.lelexuetang</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../lelexuetang-parent</relativePath>
+    </parent>
+    <artifactId>lelexuetang-learning</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>lelexuetang-learning-api</module>
+        <module>lelexuetang-learning-service</module>
+        <module>lelexuetang-learning-model</module>
+    </modules>
+
+
+</project>

@@ -111,7 +111,7 @@ public class MediaFileServiceImpl implements MediaFileService {
         String objectName = filePath + fileName + extension;
         // 上传文件到minIO
         Bucket bucket = minIoProperties.getBucket();
-        boolean result = upload(localFilePath, objectName, bucket.getFiles(), memmType);
+        boolean result = addMediaFilesToMinIO(localFilePath, objectName, bucket.getFiles(), memmType);
         if (!result) {
             LeLeXueTangException.cast("上传文件失败");
         }
@@ -186,7 +186,7 @@ public class MediaFileServiceImpl implements MediaFileService {
         String chunkFolderPath = getChunkFolderPath(fileMd5);
         String objectName = chunkFolderPath + chunk;
         String memmType = getMemmType(null);
-        boolean b = upload(localTempFilePath, objectName, bucket, memmType);
+        boolean b = addMediaFilesToMinIO(localTempFilePath, objectName, bucket, memmType);
         if (!b) {
             // 上传失败
             return RestResponse.error("上传失败", false);
@@ -288,7 +288,7 @@ public class MediaFileServiceImpl implements MediaFileService {
             return RestResponse.error("文件上传失败", -1);
         }
         // 校验文件是否一致
-        File file = downLoadFile(bucket, mergeObjectName);
+        File file = downloadFileFromMinIO(bucket, mergeObjectName);
         if (file == null) {
             return RestResponse.error("文件校验时下载失败", -1);
         }
@@ -338,7 +338,7 @@ public class MediaFileServiceImpl implements MediaFileService {
 
     // 下载文件
     @Override
-    public File downLoadFile(String bucket, String mergeObjectName) {
+    public File downloadFileFromMinIO(String bucket, String mergeObjectName) {
         try {
             GetObjectArgs getObjectArgs = GetObjectArgs.builder()
                     .bucket(bucket)
@@ -372,7 +372,7 @@ public class MediaFileServiceImpl implements MediaFileService {
     }
 
     // 上传文件到minIO
-    private boolean upload(String localFilePath, String objectName, String bucket, String memmType) {
+    public boolean addMediaFilesToMinIO(String localFilePath, String objectName, String bucket, String memmType) {
         try {
             UploadObjectArgs uploadObjectArgs = UploadObjectArgs.builder()
                     .filename(localFilePath)

@@ -40,6 +40,8 @@ public interface MediaFileService {
   */
  public UploadFileResultDto uploadFile(Long companyId, UploadFileParamsDto uploadFileParamsDto, String localFilePath);
 
+ public boolean addMediaFilesToMinIO(String localPath, String memmType, String bucketName, String objectName);
+
  /**
   * 添加媒资文件信息到数据库
   * @param companyId
@@ -92,5 +94,5 @@ public interface MediaFileService {
   * @param mergeObjectName
   * @return
   */
- File downLoadFile(String bucket, String mergeObjectName);
+ File downloadFileFromMinIO(String bucket, String mergeObjectName);
 }
