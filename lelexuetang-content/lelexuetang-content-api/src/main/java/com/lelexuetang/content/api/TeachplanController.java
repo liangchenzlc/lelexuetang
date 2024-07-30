@@ -1,5 +1,6 @@
 package com.lelexuetang.content.api;
 
+import com.lelexuetang.content.model.dto.BindTeachplanMediaDto;
 import com.lelexuetang.content.model.dto.SaveTeachplanDto;
 import com.lelexuetang.content.model.dto.TeachplanDto;
 import com.lelexuetang.content.service.TeachplanService;
@@ -49,5 +50,17 @@ public class TeachplanController {
     @PostMapping("/teachplan/moveup/{id}")
     public void moveUp(@PathVariable Long id){
         teachplanService.moveUp(id);
+    }
+
+    @ApiOperation(value = "课程计划和媒资信息绑定")
+    @PostMapping("/teachplan/association/media")
+    public void associationMedia(@RequestBody BindTeachplanMediaDto bindTeachplanMediaDto){
+        teachplanService.associationMedia(bindTeachplanMediaDto);
+    }
+
+    @ApiOperation(value = "课程计划和媒资信息解绑")
+    @DeleteMapping("/teachplan/association/media/{teachPlanId}/{mediaId}")
+    public void unAssociationMedia(@PathVariable("teachPlanId") Long teachPlanId, @PathVariable("mediaId") Long mediaId){
+        teachplanService.unAssociationMedia(teachPlanId, mediaId);
     }
 }

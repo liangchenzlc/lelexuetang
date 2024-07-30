@@ -7,10 +7,12 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.FilterInputStream;
+import java.io.*;
 import java.nio.channels.FileChannel;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @SpringBootTest
 public class MinIoClientTest {
@@ -84,4 +86,38 @@ public class MinIoClientTest {
             e.fillInStackTrace();
         }
     }
+
+    @Test
+    public void testMinIoUpload2() throws Exception {
+        String chunkFilePath = "D:\\凉尘\\Videos\\7月19日\\chunk";
+        File chunkFile = new File(chunkFilePath);
+        File[] files = chunkFile.listFiles();
+        for (File file : files) {
+            UploadObjectArgs uploadObjectArgs = UploadObjectArgs.builder()
+                    .bucket("testbucket")
+                    .object("chunk/" + file.getName())
+                    .filename(file.getAbsolutePath())
+                    .build();
+            minioClient.uploadObject(uploadObjectArgs);
+        }
+        System.out.println("上传成功");
+    }
+
+    @Test
+    public void testMinIoMerge() throws Exception {
+
+        List<ComposeSource> sourceList = new ArrayList<>();
+        for(int i = 0; i <= 69; i++ ) {
+            ComposeSource testbucket = ComposeSource.builder().bucket("testbucket").object("chunk/" + i).build();
+            sourceList.add(testbucket);
+        }
+        ComposeObjectArgs composeObjectArgs =  ComposeObjectArgs.builder()
+                .bucket("testbucket")
+                .object("test.mp4")
+                .sources(sourceList)
+                .build();
+        minioClient.composeObject(composeObjectArgs);
+        System.out.println("合并成功");
+    }
+
 }

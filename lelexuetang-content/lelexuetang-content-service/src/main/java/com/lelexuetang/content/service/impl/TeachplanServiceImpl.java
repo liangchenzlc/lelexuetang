@@ -6,6 +6,7 @@ import com.lelexuetang.base.exception.CommonError;
 import com.lelexuetang.base.exception.LeLeXueTangException;
 import com.lelexuetang.content.mapper.TeachplanMapper;
 import com.lelexuetang.content.mapper.TeachplanMediaMapper;
+import com.lelexuetang.content.model.dto.BindTeachplanMediaDto;
 import com.lelexuetang.content.model.dto.SaveTeachplanDto;
 import com.lelexuetang.content.model.dto.TeachplanDto;
 import com.lelexuetang.content.model.po.Teachplan;
@@ -202,6 +203,40 @@ public class TeachplanServiceImpl implements TeachplanService {
         teachplanMapper.updateById(teachplan);
         teachplanMapper.updateById(teachplan1);
 
+    }
+
+    @Override
+    @Transactional
+    public TeachplanMedia associationMedia(BindTeachplanMediaDto teachplanMediaDto) {
+        // 教学id
+        Long teachplanId = teachplanMediaDto.getTeachplanId();
+        Teachplan teachplan = teachplanMapper.selectById(teachplanId);
+        if (teachplan == null) LeLeXueTangException.cast("教学计划存在");
+        Integer grade = teachplan.getGrade();
+        if(grade!=2){
+            LeLeXueTangException.cast("只允许第二级教学计划绑定媒资文件");
+        }
+        Long courseId = teachplan.getCourseId();
+        //先删除原来该教学计划绑定的媒资
+        teachplanMediaMapper.delete(new LambdaQueryWrapper<TeachplanMedia>().eq(TeachplanMedia::getTeachplanId,teachplanId));
+
+        // 添加新的媒资信息
+        TeachplanMedia teachplanMedia = new TeachplanMedia();
+        teachplanMedia.setCourseId(courseId);
+        teachplanMedia.setMediaId(teachplanMediaDto.getMediaId());
+        teachplanMedia.setMediaFilename(teachplanMediaDto.getFileName());
+        teachplanMedia.setTeachplanId(teachplanId);
+        teachplanMedia.setCreateDate(LocalDateTime.now());
+        teachplanMediaMapper.insert(teachplanMedia);
+
+        return teachplanMedia;
+    }
+
+    @Override
+    public void unAssociationMedia(Long teachPlanId, Long mediaId) {
+        teachplanMediaMapper.delete(new LambdaQueryWrapper<TeachplanMedia>()
+                .eq(TeachplanMedia::getTeachplanId, teachPlanId)
+                .eq(TeachplanMedia::getMediaId, mediaId));
     }
 
     private int selectChildrenById(Teachplan teachplan) {

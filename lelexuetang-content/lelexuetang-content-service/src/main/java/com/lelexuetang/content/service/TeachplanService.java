@@ -1,7 +1,9 @@
 package com.lelexuetang.content.service;
 
+import com.lelexuetang.content.model.dto.BindTeachplanMediaDto;
 import com.lelexuetang.content.model.dto.SaveTeachplanDto;
 import com.lelexuetang.content.model.dto.TeachplanDto;
+import com.lelexuetang.content.model.po.TeachplanMedia;
 
 import java.util.List;
 
@@ -34,4 +36,13 @@ public interface TeachplanService {
      * @param id
      */
     void moveUp(Long id);
+
+    /**
+     * 课程计划与媒资文件关联
+     * @param bindTeachplanMediaDto
+     * @return
+     */
+    TeachplanMedia associationMedia(BindTeachplanMediaDto bindTeachplanMediaDto);
+
+    void unAssociationMedia(Long teachPlanId, Long mediaId);
 }

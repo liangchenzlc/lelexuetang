@@ -3,12 +3,14 @@ package com.lelexuetang.media.service;
 
 import com.lelexuetang.base.model.PageParams;
 import com.lelexuetang.base.model.PageResult;
+import com.lelexuetang.base.model.RestResponse;
 import com.lelexuetang.media.model.dto.QueryMediaParamsDto;
 import com.lelexuetang.media.model.dto.UploadFileParamsDto;
 import com.lelexuetang.media.model.dto.UploadFileResultDto;
 import com.lelexuetang.media.model.po.MediaFiles;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import java.io.File;
 import java.util.List;
 
 /**
@@ -48,4 +50,47 @@ public interface MediaFileService {
   * @return
   */
  MediaFiles addMediaFilestoDb(Long companyId, String fileName, UploadFileParamsDto uploadFileParamsDto, String files, String objectName);
+
+ /**
+  * 上传分块文件
+  * @param fileMd5
+  * @param chunk
+  * @param localTempFilePath
+  * @return
+  */
+ RestResponse uploadChunk(String fileMd5, int chunk, String localTempFilePath);
+
+ /**
+  * 检查分块文件
+  * @param fileMd5
+  * @param chunk
+  * @return
+  */
+ RestResponse<Boolean> checkChunk(String fileMd5, int chunk);
+
+
+ /**
+  * 检查文件
+  * @param fileMd5
+  * @return
+  */
+ RestResponse<Boolean> checkFile(String fileMd5);
+
+ /** @param fileMd5  文件md5
+ * @param chunkTotal 分块总和
+ * @param uploadFileParamsDto 文件信息
+ * @return com.xuecheng.base.model.RestResponse
+ * @author Mr.M
+ * @date 2022/9/13 15:56
+ */
+ RestResponse mergechunks(Long companyId,String fileMd5,int chunkTotal,UploadFileParamsDto uploadFileParamsDto);
+
+
+ /**
+  * 下载文件
+  * @param bucket
+  * @param mergeObjectName
+  * @return
+  */
+ File downLoadFile(String bucket, String mergeObjectName);
 }
